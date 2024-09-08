@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.active {
+
+    backdrop-filter: blur(5px);
+
+}
+
+.nav {
+    display: flex;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav img {
+    height: 34px;
+    width: 37px;
+}
+
+.navbox a {
+    color: white;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    margin-left: 4px;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.navbox a:hover {
+    color: white;
+    background-color: red;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.nav h2 {
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#addcart {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.navbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_btn {
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.nav_btn:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 20px white;
+}
+
+#menu {
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url(img/Background.jpg) no-repeat center;
+    background-size: cover;
+    gap: 1rem;
+}
+
+.home-text {
+    padding: 2rem;
+    width: 60vw;
+    margin: 3rem;
+    color: white;
+}
+
+.home-text span {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.home-text h1 {
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin: 1.2rem 0 1.4rem;
+    font-weight: 600;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0.5rem 3rem;
+    text-transform: capitalize;
+
+}
+
+.btn {
+    padding: 0.8rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    margin: 0px 10px;
+    background: transparent;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px white;
+    letter-spacing: 1px;
+    background-color: red;
+    color: white;
+}
+
+.home-connect {
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.location {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.about,
+.food,
+.customer,
+.contact {
+    display: flex;
+    margin: 2rem;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
+
+.heading h2 {
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    margin: 2rem;
+    text-transform: capitalize;
+    border-top: 6px solid red;
+    border-left: 6px solid green;
+    border-right: 6px solid rgb(0, 166, 255);
+    border-bottom: 6px solid gold;
+}
+
+.about-container {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px 0px whitesmoke;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-img {
+    width: 200px;
+    height: 200px;
+}
+
+.box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.about-box {
+    text-align: center;
+}
+
+.about-box h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.2rem 0 0.5rem;
+}
+
+.about-box h2 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+
+
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem;
+    margin: 1rem 0 0 0;
+}
+
+.shop-box {
+    position: relative;
+    box-shadow: 0 3px 5px white;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
+
+}
+
+.shop-img {
+    width: 300px;
+    height: 250px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.shop-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shop-img img:hover,
+.box-img img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.shop-price,
+.addcart {
+    color: white;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.shop-price h3,
+.shop-price h4 {
+    padding: 8px 0px 0px 0px;
+
+}
+
+.addcart {
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: fit-content;
+}
+
+.addcart:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px white;
+    cursor: pointer;
+}
+
+.addcart i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.load {
+    padding: 20px;
+    margin: 5px;
+    border: 2px Solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.load:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px white;
+
+}
+
+.customer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem;
+    margin: 1rem;
+    color: white;
+    /* flex-wrap:wrap; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.box {
+    text-align: center;
+    box-shadow: 0px 4px 4px whitesmoke;
+    border-radius: 0.5rem;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+
+}
+
+.box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.box h2 {
+    border: none;
+}
+
+.box .bx {
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.box p {
+    margin: 0.5rem 0 1rem;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+
+
+.contactdetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem;
+}
+
+.contacttext {
+    margin: 10px;
+    padding: 10px;
+    min-width: 50%;
+    text-align: center;
+}
+
+.contactlist h4 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+}
+
+.contactlist li {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.contactlist li i {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.contactlist li a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactlist li a:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: white;
+}
+
+.contacticons a {
+    text-decoration: none;
+}
+
+.contacticons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 20px 15px 20px 0;
+
+}
+
+.contacticons i:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px white;
+    border: 2px solid white;
+}
+
+.contactform form {
+    position: relative;
+}
+
+.input,
+.send {
+    border: 2px solid white;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.send {
+    border: 2px solid white;
+}
+
+.contactform textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contactform form .send {
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: white;
+    border-radius: 40px;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.contactform form .send:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 20px black, 0 0 20px white;
+}
+
+.lasttext p {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 25px 0;
+    background: black;
+    font-weight: 300;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    header {
+        justify-content: normal;
+    }
+
+    .nav,
+    .navbox {
+        text-wrap: nowrap;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navbox {
+        padding-left: 0;
+    }
+
+    .nav h2 {
+        padding: 0px 10px;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .navbox a {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+
+    #addcart {
+        font-size: 1.4rem;
+        margin: 3px;
+    }
+
+    .nav_btn {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #menu {
+        display: initial;
+    }
+
+    .navbox {
+        position: absolute;
+        top: -500px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        backdrop-filter: blur(15px);
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .navbox a,
+    .navbox i {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    .navbox.show {
+        top: 100%;
+    }
+
+    #menu {
+        position: absolute;
+        right: 10px;
+        backdrop-filter: blur(5px);
+        margin: 20px;
+
+    }
+
+    .customer-container {
+        flex-wrap: wrap;
+    }
+
+    .home-text {
+        width: auto;
+        backdrop-filter: blur(5px);
+    }
+
+    .home-text span {
+        font-size: 2rem;
+
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+    }
+
+    .heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .btn {
+        margin: 0px 5px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .home-text {
+        margin: 0;
+    }
+
+    .contactdetails {
+        flex-direction: column;
+    }
+}
